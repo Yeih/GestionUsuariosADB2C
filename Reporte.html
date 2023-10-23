@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reporte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <button class="logout-button"><a href="home.html">Home</a></button> 
+  </header>
+
+  <aside>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#">Crear</a>
+        <ul class="sub-menu">
+          <li><a href="crear-usuario.html">Crear Usuario</a></li>
+          <li><a href="crear-lote.html">Crear Usuario Lote</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Buscar Usuarios</a>
+        <ul class="sub-menu">
+          <li><a href="lista-usuario.html">Lista Usuarios</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Reportes</a>
+        <ul class="sub-menu">
+          <li><a href="Reporte.html">Generar Reporte</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <div class="form-caja"> 
+        <h1>Generar Reporte</h1>
+        <form action="report.js" method="post">
+            <select name="Reporte" >
+                <option value="" selected disabled>Reporte</option>
+                <option value="2">Usuario 2</option>
+                <option value="3">Usuario 3</option>
+              </select>   
+            <select id="tenant" >
+                <option value="" selected disabled>Tenant</option>
+                <option value="DHLNI">Nicaragua</option>
+                <option value="DGF">Colombia</option>
+                <option value="DHLPE">Peru</option>
+                <option value="DHLCR">Costa Rica</option>
+                <option value="DHLHN">Honduras</option>
+                <option value="DHLSV">Salvador</option>
+                <option value="DHLCL">Chile</option>
+                <option value="DHLGT">Guatemala</option>
+                <option value="DHLAR">ARgentina</option>
+            </select>  
+            <input type="text" id="roltms" placeholder="Roltms">
+            <input type="text" id="permisoCliente" placeholder="Permiso Cliente">
+            <input type="submit" value="Generar">
+        </form>
+    </div>    
+</main>
+  
+<footer>
+  <div class="footer-content">
+    <span>© 2023 Ucompensar. Todos los derechos reservados.</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

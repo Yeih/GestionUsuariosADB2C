@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crear Usuario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <header>
+    <button class="logout-button"><a href="home.html">Home</a></button> 
+  </header>
+
+  <aside>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#">Crear</a>
+        <ul class="sub-menu">
+          <li><a href="crear-usuario.html">Crear Usuario</a></li>
+          <li><a href="crear-lote.html">Crear Usuario Lote</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Buscar Usuarios</a>
+        <ul class="sub-menu">
+          <li><a href="lista-usuario.html">Lista Usuarios</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Reportes</a>
+        <ul class="sub-menu">
+          <li><a href="Reporte.html">Generar Reporte</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </aside>
+  <main>
+
+    <div class="form-container">
+      <div class="form-box">
+        <h2>CREACIÓN DE USUARIOS AD B2C</h2>
+        <form action="/submit" method="post">
+      
+          <div class="form-group">
+            <label for="user">User:</label>
+            <input type="text" id ="user" name ="user" />
+          </div>
+      
+          <div class="form-group">  
+            <label for="email">Email:</label>
+            <input type="email" id ="email"  name ="email"/>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id ="password" name ="password" />
+          </div>
+      
+          <div class="form-group">
+            <label for ="tenant">Tenant:</label>
+            <select id="tenant" name="tenant">
+              <option value="" selected disabled>Tenant</option>
+              <option value="DHLNI">Nicaragua</option>
+              <option value="DGF">Colombia</option>
+              <option value="DHLPE">Peru</option>
+              <option value="DHLCR">Costa Rica</option>
+              <option value="DHLHN">Honduras</option>
+              <option value="DHLSV">Salvador</option>
+              <option value="DHLCL">Chile</option>
+              <option value="DHLGT">Guatemala</option>
+              <option value="DHLAR">Argentina</option>
+          </select>
+          </div>
+      
+          <div class="form-group">
+            <label for ="perfiles">Perfiles:</label>
+            <select id="perfiles" name="Perfiles">
+              <option value="" selected disabled>Perfil</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Supervisor">Supervisor</option>
+              <option value="Operador">Operador</option>
+              <option value="Cliente">Cliente</option>
+          </select>
+          </div>
+          <div class="form-buttons"></div>
+            <button type="button" id="crear-usuario">Crear Usuario</button>
+            <button type="button" >Cancelar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <span>© 2023 Ucompensar. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

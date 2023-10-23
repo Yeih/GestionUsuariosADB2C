@@ -1,0 +1,74 @@
+<!-- En crear-lote.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crear Lote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <button class="logout-button"><a href="home.html">Home</a></button> 
+  </header>
+
+  <aside>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#">Crear</a>
+        <ul class="sub-menu">
+          <li><a href="crear-usuario.html">Crear Usuario</a></li>
+          <li><a href="crear-lote.html">Crear Usuario Lote</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Buscar Usuarios</a>
+        <ul class="sub-menu">
+          <li><a href="lista-usuario.html">Lista Usuarios</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Reportes</a>
+        <ul class="sub-menu">
+          <li><a href="Reporte.html">Generar Reporte</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </aside>
+
+  
+  <main>
+
+    <div class="form">
+    <div class="form-boxlote">
+        <h3>CARGAR ARCHIVO EN LOTE</h3>
+      <div class="form-group">
+        <label for="file">Archivo:</label>
+        <input type="file" id="file">
+      </div>
+  
+      <div class="form-group">
+        <button>Guardar</button> 
+      </div>
+    </div>
+    </div>
+  
+  </main>
+<script>
+  const fileInput = document.getElementById('file');
+  const filename = document.getElementById('filename');
+
+  fileInput.addEventListener('change', (e) => {
+    filename.textContent = e.target.files[0].name;
+  });
+</script>
+
+  <footer>
+    <div class="footer-content">
+      <span>© 2023 Ucompensar. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

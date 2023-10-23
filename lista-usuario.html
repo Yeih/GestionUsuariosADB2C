@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Usuario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="logout-button"><a href="home.html">Home</a></button> 
+  </header>
+  <aside>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#">Crear</a>
+        <ul class="sub-menu">
+          <li><a href="crear-usuario.html">Crear Usuario</a></li>
+          <li><a href="crear-lote.html">Crear Usuario Lote</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Buscar Usuarios</a>
+        <ul class="sub-menu">
+          <li><a href="lista-usuario.html">Lista Usuarios</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Reportes</a>
+        <ul class="sub-menu">
+          <li><a href="Reporte.html">Generar Reporte</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </aside>
+
+<main>
+  <div class="form-lista"> 
+    <h1>Lista de usuarios</h1>
+    <input type="text" class="buscar" placeholder="Buscar">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NickName</th>
+          <th>Correo electrónico</th>
+          <th>Tenant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>NickName1</td>
+          <td>correoelectronico1@example.com</td>
+          <td>tenant1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NickName2</td>
+          <td>correoelectronico2@example.com</td>
+          <td>tenant2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>NickName3</td>
+          <td>correoelectronico3@example.com</td>
+          <td>tenant3</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  <div class="list" style="width: 50%"></div>
+    <button id="previous">Anterior</button>
+    <button id="next">Siguiente</button>
+    <script src="script.js"></script>
+  </div>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-content">
+      <span>© 2023 Ucompensar. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
