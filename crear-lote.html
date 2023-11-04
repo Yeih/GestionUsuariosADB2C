@@ -45,30 +45,25 @@
         <h3>CARGAR ARCHIVO EN LOTE</h3>
       <div class="form-group">
         <label for="file">Archivo:</label>
-        <input type="file" id="file">
+        <input type="file" id="upload">
       </div>
   
       <div class="form-group">
-        <button>Guardar</button> 
+        <button id="saveButton">Guardar</button>
+        <button><a href="/Resources/Plantilla-lote-Usuarios.xlsx" download="Plantilla-lote-Usuarios.xlsx"><i class="fas fa-download"></i> Descargar Plantilla</a></button>
       </div>
     </div>
     </div>
   
   </main>
-<script>
-  const fileInput = document.getElementById('file');
-  const filename = document.getElementById('filename');
-
-  fileInput.addEventListener('change', (e) => {
-    filename.textContent = e.target.files[0].name;
-  });
-</script>
 
   <footer>
     <div class="footer-content">
       <span>© 2023 Ucompensar. Todos los derechos reservados.</span>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
   <script src="script.js"></script>
+  <script src="lote.js" defer></script>
 </body>
 </html>
