@@ -1,25 +1,30 @@
-const table = document.querySelector('table');
+function leerArchivo(evt) {
+  let file = evt.target.files[0];
+  let reader = new FileReader();
 
-const reader = new FileReader();
+  reader.onload = (e) => {
+    let data = e.target.result;
+    crearTabla(data);
+  };
 
-reader.readAsText('f231017170313823.csv');
+  reader.readAsText(file);
+}
 
-reader.onload = function() {
-  const data = Papa.parse(reader.result);
+function crearTabla(data) {
+  let tabla = `<table>`;
+  let filas = data.split("\n");
+  for (let fila of filas) {
+    let celdas = fila.split(",");
+    let tr = `<tr>`;
+    for (let celda of celdas) {
+      tr += `<td>${celda}</td>`;
+    }
+    tr += `</tr>`;
+    tabla += tr;
+  }
+  tabla += `</table>`;
 
-  const tbody = table.querySelector('tbody');
+  document.querySelector("#tablares").innerHTML = tabla;
+}
 
-  data.data.forEach((row) => {
-    const tr = document.createElement('tr');
-
-    row.forEach((cell) => {
-      const td = document.createElement('td');
-
-      td.textContent = cell;
-
-      tr.appendChild(td);
-    });
-
-    tbody.appendChild(tr);
-  });
-};
+document.querySelector("form").addEventListener("submit", leerArchivo);

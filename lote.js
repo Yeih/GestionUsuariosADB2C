@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return "CREAREVENTO";
           case "Cliente":
             return "BUSCARORDENES,RPTSABANA";
+          case "":
+            return ""
           default:
             return null;
         }
